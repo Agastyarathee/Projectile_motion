@@ -29,10 +29,12 @@ function setup() {
 	ground.shapecolor =color("grey");
 
 	 paperCrushed = new  paper(200,100);
-	 lside = new dustbin(1040,510,10.5,120.2);
-	 rside = new dustbin(1245,510,10.5,120.2);
-	 bside = new dustbin(1140,564.5,205,10.2);
+	 //lside = new dustbin(1040,510,10.5,120.2);
+	 //rside = new dustbin(1245,510,10.5,120.2);
+	 //bside = new dustbin(1140,564.5,205,10.2);
 
+	 
+	 bside = new dustbin(1140,510.11,150,150);
 
 
 	Engine.run(engine);
@@ -42,12 +44,14 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background(0);
+  background("white");
   rect(ground.position.x,ground.position.y,1400,10);
-  paperCrushed.display();
-  lside.display();
-  rside.display();
+  
   bside.display();
+  /*lside.display();
+  rside.display();
+  */
+  paperCrushed.display();
   drawSprites();
 
 }

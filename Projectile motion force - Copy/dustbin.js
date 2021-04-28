@@ -6,15 +6,17 @@ class dustbin {
       this.body = Bodies.rectangle(x, y,width,height,options);
       this.width=width;
       this.height=height;
+    this.image=loadImage("files/bin.png");
       World.add(world, this.body);
     }
     display(){
-      rectMode(CENTER);
+      
       stroke("darkred");
       strokeWeight(5);
       fill("red");
-      rect(this.body.position.x, this.body.position.y, this.width, this.height);
-      
+      imageMode(CENTER);
+      //rect(this.body.position.x, this.body.position.y, this.width, this.height);
+      image(this.image,this.body.position.x,this.body.position.y,this.width,this.height);
     }
   };
   
